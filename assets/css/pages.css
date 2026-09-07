@@ -232,3 +232,147 @@ td.is-past-tier { opacity: 0.45; text-decoration: line-through; }
   .rail a[aria-current="page"] { border-color: var(--magenta); }
   .hours__row { grid-template-columns: 1fr; gap: 0.15rem; }
 }
+
+/* -- schedule ------------------------------------------------------------- */
+
+.day-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--sp-2);
+}
+.daytab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  color: var(--text-dim);
+}
+.daytab:hover { border-color: var(--line-strong); color: var(--text); }
+.daytab b {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-variation-settings: "wdth" 108;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+.daytab span { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.06em; }
+.daytab em {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-faint);
+  margin-top: 0.15rem;
+}
+.daytab[aria-pressed="true"] {
+  border-color: var(--magenta);
+  background: color-mix(in srgb, var(--magenta) 10%, var(--surface));
+  color: var(--text);
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.72rem;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text-faint);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+}
+.chip::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--chip);
+  opacity: 0.35;
+}
+.chip[aria-pressed="true"] {
+  color: var(--text);
+  border-color: var(--chip);
+  background: color-mix(in srgb, var(--chip) 12%, transparent);
+}
+.chip[aria-pressed="true"]::before { opacity: 1; }
+
+.schedule { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+.slot {
+  display: grid;
+  grid-template-columns: 11.5rem minmax(0, 1fr) 7.5rem;
+  gap: var(--sp-4);
+  align-items: baseline;
+  padding: var(--sp-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--chip);
+}
+.slot__time {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  white-space: nowrap;
+}
+.slot__body h3 { font-size: 1rem; font-variation-settings: "wdth" 100; color: var(--text); }
+.slot__body h3 a { color: var(--text); text-decoration: none; }
+.slot__body h3 a:hover { color: var(--magenta); text-decoration: underline; }
+.slot__body p { font-size: 0.88rem; color: var(--text-faint); margin-top: 0.15rem; }
+.slot__track {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--chip);
+  text-align: right;
+}
+.schedule__empty { color: var(--text-dim); padding: var(--sp-5); border: 1px dashed var(--line-strong); border-radius: var(--r-lg); }
+
+/* -- speaker cards -------------------------------------------------------- */
+
+.speakers { display: flex; flex-direction: column; gap: var(--sp-4); }
+.speaker {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: var(--sp-5);
+  padding: var(--sp-5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+.speaker__when {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--cyan);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+.speaker__when b { display: block; color: var(--text); font-weight: 600; }
+.speaker h3 { color: var(--text); }
+.speaker__role {
+  font-size: 0.9rem;
+  color: var(--text-faint);
+  margin-top: 0.2rem;
+  margin-bottom: var(--sp-3);
+}
+.speaker__role b { color: var(--text-dim); font-weight: 600; }
+.speaker p { color: var(--text-dim); font-size: 0.94rem; }
+
+@media (max-width: 820px) {
+  .day-tabs { grid-template-columns: repeat(3, 1fr); }
+  .slot { grid-template-columns: 1fr; gap: var(--sp-2); }
+  .slot__track { text-align: left; }
+  .speaker { grid-template-columns: 1fr; gap: var(--sp-3); }
+}

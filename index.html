@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Source+Sans+3:ital,wght@0,300..800;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
 
@@ -92,15 +93,128 @@
 
   <!-- ==================== HOME ==================== -->
   <section class="page" data-route="/" hidden>
-    <div class="wrap page__head">
-      <p class="eyebrow">Nov. 5–7, 2026 · Boston, MA</p>
-      <h1>Radiate Change</h1>
-      <p class="lede">
-        The Society of Women Engineers annual conference returns to the Thomas M. Menino
-        Convention &amp; Exhibition Center — 14,000+ attendees, 300+ exhibiting organizations,
-        and more than 200 sessions.
-      </p>
+
+    <div class="hero">
+      <div class="hero__rays" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <div class="hero__kicker">
+          <span>Nov. 5–7, 2026 · Boston, MA</span>
+          <span class="pill pill--open">Registration open</span>
+        </div>
+        <h1>WE26<em>Radiate Change</em></h1>
+        <p class="hero__lede">
+          The Society of Women Engineers annual conference returns to the Thomas M. Menino
+          Convention &amp; Exhibition Center — three days of the world's largest career fair for
+          women and allies in engineering and technology.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#/registration">Register for WE26</a>
+          <a class="btn btn--ghost" href="#/program/schedule">See the schedule</a>
+        </div>
+        <div class="countdown" id="countdown" aria-label="Time until WE26 opens"></div>
+      </div>
+
+      <div class="facts">
+        <div class="wrap">
+          <dl class="facts__grid">
+            <div class="fact">
+              <dt>Dates</dt>
+              <dd>Nov. 5–7<small>Career fair Nov. 5–6</small></dd>
+            </div>
+            <div class="fact">
+              <dt>Venue</dt>
+              <dd>Menino Center<small>415 Summer St, Boston</small></dd>
+            </div>
+            <div class="fact">
+              <dt>Pricing now</dt>
+              <dd><span data-tier-label>Standard</span><small data-tier-note>on or after Sept. 1</small></dd>
+            </div>
+            <div class="fact">
+              <dt>Headquarters hotel</dt>
+              <dd>Omni Seaport<small>Shuttles from block hotels</small></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
     </div>
+
+    <div class="wrap home-section">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat__n">14K+</div>
+          <h3>Find your people</h3>
+          <p>Build your global community through networking, SWE Affinity Group meetups, and special events designed around belonging.</p>
+        </div>
+        <div class="stat">
+          <div class="stat__n">300+</div>
+          <h3>Organizations hiring</h3>
+          <p>The world's largest career fair for women and allies in engineering and technology. Everyone is welcome — SWE respects that gender is a continuum.</p>
+        </div>
+        <div class="stat">
+          <div class="stat__n">200+</div>
+          <h3>Sessions</h3>
+          <p>Leading experts on emerging trends, data, and best practices. Attend live or access select sessions virtually, at any career stage.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap home-section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Plan your conference</p>
+          <h2>Start here</h2>
+        </div>
+      </div>
+      <div class="cards">
+        <a class="card" href="#/registration">
+          <h3>Registration</h3>
+          <p>Rates, attendee types, eligibility, and every discount in one place — with the tier you're actually in today marked for you.</p>
+          <span class="card__go">Registration home →</span>
+        </a>
+        <a class="card" href="#/program/schedule">
+          <h3>Schedule at a Glance</h3>
+          <p>All four days as a filterable grid you can read on your phone — not a PDF download.</p>
+          <span class="card__go">View schedule →</span>
+        </a>
+        <a class="card" href="#/travel">
+          <h3>Travel &amp; Housing</h3>
+          <p>Official hotel block, headquarters hotel, shuttles, and what to do when a property sells out.</p>
+          <span class="card__go">Plan your trip →</span>
+        </a>
+        <a class="card" href="#/program/career-fair">
+          <h3>Career Fair</h3>
+          <p>Floor hours by attendee type, interview booth times, and how to flag your résumé for recruiters.</p>
+          <span class="card__go">Career fair details →</span>
+        </a>
+        <a class="card" href="#/program/keynotes">
+          <h3>Keynote Speakers</h3>
+          <p>Three mornings, three engineers — GE Aerospace, Johnson Controls, and LA's water system.</p>
+          <span class="card__go">Meet the speakers →</span>
+        </a>
+        <a class="card" href="#/get-involved">
+          <h3>Get Involved</h3>
+          <p>Volunteer at WE26, join a directorate or working group, or reach the team that runs it.</p>
+          <span class="card__go">Find your way in →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="wrap home-section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">About this project</p>
+          <h2>Why a redesign?</h2>
+          <p class="lede">
+            This concept started with a dead end: on the live site, "Registration" is a dropdown
+            label with no page behind it, so its sub-pages have no hub to return to. The full
+            audit — what's hard to reach today, and what a rebuild buys SWE over the next several
+            conference cycles — is written up alongside the design.
+          </p>
+        </div>
+        <a class="btn btn--ghost" href="#/notes">Read the redesign notes</a>
+      </div>
+    </div>
+
   </section>
 
   <!-- ==================== REGISTRATION ==================== -->
@@ -211,5 +325,6 @@
 </footer>
 
 <script src="assets/js/router.js"></script>
+<script src="assets/js/site.js"></script>
 </body>
 </html>

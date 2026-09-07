@@ -1682,7 +1682,210 @@
   </section>
 
   <section class="page" data-route="/notes" hidden>
-    <div class="wrap page__head"><h1>Redesign Notes</h1></div>
+    <div class="wrap page__head">
+      <p class="eyebrow">About this project</p>
+      <h1>Redesign Notes</h1>
+      <p class="lede">
+        Eleven findings from the live WE26 site, ranked by how much they cost a visitor, each
+        paired with what this concept does instead — then the case for why building it once pays
+        off across conference cycles rather than just this one.
+      </p>
+      <p class="verified">
+        Observations recorded from we26.swe.org in September 2026. Each is something checked
+        directly in the page markup or by clicking through, not inferred.
+      </p>
+    </div>
+
+    <div class="wrap layout">
+      <nav class="rail" aria-label="On this page">
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="#/notes">Findings</a></li>
+          <li><a href="#/notes">Long-term payoff</a></li>
+          <li><a href="#/notes">Scope &amp; limits</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+
+        <section>
+          <h2>Findings</h2>
+
+          <div class="findings">
+
+            <article class="finding">
+              <div>
+                <h3>Navigation labels with no page behind them <span class="sev sev--high">High</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>&ldquo;Registration,&rdquo; &ldquo;About,&rdquo; &ldquo;Resources,&rdquo; and &ldquo;Schedule &amp; Highlights&rdquo; are dropdown labels only. Opening a sub-page such as Registration Fees leaves <strong>no hub to return to</strong> — the parent isn't a destination, so there's no way back up a level.</dd></dl>
+                  <dl class="finding__row"><dt>Also</dt><dd>The site renders <strong>no breadcrumbs on any page</strong>, and no body or footer link returns to the landing page. The logo is the only route home, which is a convention many visitors don't know.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>Every nav label is a real route with a declared parent. <a href="#/registration">Registration</a> and <a href="#/program">Program</a> are hub pages, breadcrumbs are derived from the route table so they can't drift, and each sub-page carries a rail listing its siblings.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>The schedule is a PDF <span class="sev sev--high">High</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>The &ldquo;Schedule at a Glance&rdquo; page's content is a link to download a PDF. A PDF can't be filtered, can't be deep-linked to one session, reflows badly on the phone people carry around the convention center, and is invisible to on-site search.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>The <a href="#/program/schedule">schedule</a> is data: five days as tabs, six tracks as filters, each item linking to the page that explains it. Modelling it this way also surfaced things the PDF buries — interview booths open four hours before the Thursday floor does.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>Pricing tables don't say which tier is live <span class="sev sev--high">High</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>Three tier columns are presented identically, and the reader works out from the date which one applies. Expired early-bird prices sit at equal visual weight beside the price they'd actually pay.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>The active tier is computed from the published cutoff dates and highlighted; expired tiers are struck through. Correct today and correct in October, with no manual edit.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>Deadlines that exist only inside FAQ answers <span class="sev sev--high">High</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>Three hard deadlines appear nowhere but in the body of an FAQ answer: <strong>Sept. 15</strong> to guarantee accessibility accommodations, <strong>Oct. 1</strong> to close bulk registration, <strong>Oct. 16</strong> to claim a visa-denial refund. The FAQ page has no search, so finding them means reading the whole accordion.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>The <a href="#/faqs">FAQ is searchable</a>, deadlines are tagged, and each one is repeated on the page where someone would actually look — the accessibility cutoff on <a href="#/travel">Travel &amp; Housing</a>, the bulk close on <a href="#/registration/discounts">Discounts</a>.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>No page for &ldquo;how do I get involved&rdquo; <span class="sev sev--med">Medium</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>Volunteering, directorates, section leadership, and speaking each sit behind a different &ldquo;Email SWE&rdquo; link on a different page. Someone who wants in has to work out both the route and the wording of a cold introduction.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd><a href="#/get-involved">Get Involved</a> names the four routes and drafts the introduction email from a few fields. For a volunteer-run organization, the path from &ldquo;interested&rdquo; to &ldquo;contributing&rdquo; is worth a page of its own.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>The same hours are published in several places <span class="sev sev--med">Medium</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>Attendee registration hours appear on both Registration Information and Career Fair. Career fair hours appear on three separate pages. Interview booth hours appear on two. Every duplicate is a place next year's edit can be missed.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>Times that structure the conference live in one data file and render wherever they're needed. Editorial duplication is deliberate and cross-linked rather than copy-pasted.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>Page titles are search-engine sentences, not page names <span class="sev sev--med">Medium</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>The FAQ page's title is &ldquo;Frequently Asked Questions on Various Topics and Issues.&rdquo; The fees page is &ldquo;Overview of Registration Fees for Conference Attendance.&rdquo; Keynotes is &ldquo;Keynote Speakers Announced for November Industry Event.&rdquo; These are what a visitor sees in a browser tab, a bookmark, and a screen reader's announcement.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>Titles are the page's name plus the conference — &ldquo;Registration Fees · WE26 Boston.&rdquo; Ten open tabs stay distinguishable.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>Seven vendor domains, unsignalled <span class="sev sev--med">Medium</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>Registration goes to Cvent, housing to Cvent/Passkey, the full schedule to EventScribe, the floor plan to ExpoCad, shuttles to Kushner, scooters to Scootaround, child care to JotForm. Handing off to vendors is normal for an event this size — but the links don't consistently mark that you're leaving, on a site that also warns attendees about scam sites impersonating SWE.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>Every off-site link is marked with an arrow and named by its destination, so &ldquo;this is the real Cvent&rdquo; is legible. The scam warning sits next to the booking instructions rather than on its own page.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>Duplicated items in the navigation <span class="sev sev--low">Low</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>Roughly 40 links across four dropdowns, with &ldquo;Enginuity Assistant&rdquo; appearing twice and &ldquo;List of Committed Exhibitors&rdquo; appearing under two different sections. Items are ordered alphabetically rather than by how often they're needed.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>Two dropdowns and four direct links. Registration sits first because it's the most common task, and each dropdown opens with its hub page.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>Time-sensitive copy with no date on it <span class="sev sev--low">Low</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>Several pages carry &ldquo;additional details are forthcoming,&rdquo; &ldquo;the app will be available in August 2026,&rdquo; and &ldquo;sign-up is full&rdquo; with no indication of when that was written or last checked. A reader can't tell stale from current.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>Conference state is computed from dates rather than described in prose, so &ldquo;registration open&rdquo; and the active pricing tier are always current.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+            <article class="finding">
+              <div>
+                <h3>Discounts scattered across four locations <span class="sev sev--low">Low</span></h3>
+                <div class="finding__grid">
+                  <dl class="finding__row"><dt>Live site</dt><dd>Promotional discounts, registration information, the fees page, and two FAQ answers each carry part of the picture. Nowhere states the rule that only one promo code applies per attendee alongside the group rates it interacts with.</dd></dl>
+                  <dl class="finding__row finding__row--fix"><dt>Here</dt><dd>All six routes to a lower price on <a href="#/registration/discounts">one page</a>, each with its deadline, plus the stacking rule stated explicitly.</dd></dl>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section>
+          <h2>Why this pays off over years, not just this one</h2>
+          <p>
+            The strongest argument for a rebuild isn't that this year's site could look better. It's
+            that the conference site is rebuilt every cycle — WE24, WE25, WE26 — and each rebuild
+            currently starts near zero. What follows is what changes if the structure is built once
+            and carried forward.
+          </p>
+
+          <div class="payoff">
+            <div class="payoff__item">
+              <h3>Next year becomes a data edit</h3>
+              <p>The schedule, fees, and deadlines are data, not prose. Rolling to WE27 means editing dates and rates in two files — not re-authoring pages and hoping every duplicate got caught.</p>
+            </div>
+            <div class="payoff__item">
+              <h3>Deadline logic stops being manual</h3>
+              <p>Nobody has to remember to strike out early-bird pricing on Sept. 1 or flip a banner on Oct. 19. The dates are declared once and the pages follow them.</p>
+            </div>
+            <div class="payoff__item">
+              <h3>Volunteer turnover stops costing knowledge</h3>
+              <p>A dependency-free static site runs with one command and no build chain. A collegiate volunteer can clone it, change a session time, and see the result — which matters for an organization whose contributors graduate every few years.</p>
+            </div>
+            <div class="payoff__item">
+              <h3>Fewer emails to SWE staff</h3>
+              <p>Housing, member-pricing eligibility, and deadline questions are the predictable inbox load. Answering them where people already look shifts work away from a small staff during the busiest month.</p>
+            </div>
+            <div class="payoff__item">
+              <h3>Accessibility becomes structural</h3>
+              <p>Breadcrumbs, real headings, focus management on navigation, and searchable text are properties of the system rather than things re-checked page by page each year — on a site whose own FAQ commits to ADA compliance.</p>
+            </div>
+            <div class="payoff__item">
+              <h3>Past years stay readable</h3>
+              <p>A stable route structure means previous conferences can be archived rather than replaced, which matters for award records, speaker history, and partner reporting.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Scope and limits</h2>
+          <p>
+            Honest boundaries on what this is, so it can be judged for what it claims to be:
+          </p>
+          <ul>
+            <li>This is an <strong>unofficial concept</strong>, not affiliated with or endorsed by SWE. It takes no registrations and processes no payments.</li>
+            <li>Content is drawn from the public WE26 site to demonstrate structure. Keynote biographies are condensed rather than reproduced, and no SWE or partner logos or marks are used.</li>
+            <li>Findings are observations about information architecture from the public site. <strong>No formal accessibility audit was run</strong> — the accessibility point above is about structure, not a WCAG conformance claim.</li>
+            <li>Session-level programming (the 200+ talks) properly lives in a dedicated planner. This concept covers the fixed structure around it.</li>
+            <li>Nothing here reflects constraints the SWE team may be working under — vendor contracts, CMS limits, staffing — that aren't visible from outside.</li>
+          </ul>
+          <div class="notice">
+            <div>
+              Built as a student project to think through information architecture for a conference
+              site that thousands of engineers rely on to plan three days in an unfamiliar city.
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
   </section>
 
 </main>

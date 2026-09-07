@@ -22,10 +22,16 @@ Full audit and rationale: see the **Redesign Notes** page in the site itself (`#
 A dependency-free static site. No build step, no framework, no package manager.
 
 ```
-index.html            all pages, as hash-addressed sections
-assets/css/tokens.css design tokens (colour, type scale, spacing)
-assets/css/base.css   chrome, layout primitives, responsive rules
-assets/js/router.js   hash router, breadcrumbs, nav state, theme toggle
+index.html              17 pages, as hash-addressed sections
+assets/css/tokens.css   design tokens (colour, type scale, spacing)
+assets/css/base.css     chrome, layout primitives, responsive rules
+assets/css/home.css     landing page and hero
+assets/css/pages.css    interior components: rails, tables, schedule, forms
+assets/js/router.js     hash router, breadcrumbs, nav state, theme toggle
+assets/js/site.js       countdown and live pricing-tier logic
+assets/js/schedule.js   schedule data and filtering
+assets/js/faq.js        FAQ search
+assets/js/involve.js    Get Involved email composer
 ```
 
 ### Design notes
@@ -55,6 +61,28 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000>.
 
+## Pages
+
+| Route | What it covers |
+| --- | --- |
+| `#/` | Landing page, live countdown, current pricing tier |
+| `#/registration` | Hub: status, sub-pages, pre-registration gotchas, on-site hours |
+| `#/registration/fees` | All rates, with today's tier highlighted |
+| `#/registration/how` | Attendee types and member-pricing eligibility |
+| `#/registration/discounts` | All six routes to a lower price, with deadlines |
+| `#/program` | Hub for the three days |
+| `#/program/schedule` | Filterable schedule by day and track |
+| `#/program/keynotes` | The three keynote speakers |
+| `#/program/career-fair` | Floor hours, interview booths, résumé prep |
+| `#/program/networking` | Affinity group lounges, Rainbow Lounge, quiet space |
+| `#/program/awards` | APEX presentation and awards reception |
+| `#/program/swenext` | The free public STEM expo |
+| `#/travel` | Housing, accessibility, families, security, visas |
+| `#/faqs` | Searchable FAQ |
+| `#/exhibitors` | Exhibiting, booth logistics, partners |
+| `#/get-involved` | Routes into SWE, plus an email composer |
+| `#/notes` | The audit: 11 findings and the long-term case |
+
 ## Status
 
-Work in progress. Built incrementally — see the commit history.
+Complete. Built incrementally — see the commit history, one commit per section.

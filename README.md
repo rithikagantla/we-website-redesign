@@ -32,6 +32,8 @@ assets/js/site.js       countdown and live pricing-tier logic
 assets/js/schedule.js   schedule data and filtering
 assets/js/faq.js        FAQ search
 assets/js/involve.js    Get Involved email composer
+assets/js/assistant.js  "Ask WE26" grounded-retrieval assistant
+assets/css/assistant.css assistant panel
 ```
 
 ### Design notes
@@ -43,6 +45,15 @@ wordmark) with Source Sans 3 for body copy and IBM Plex Mono for times, rates, a
 
 Light and dark themes are both designed, driven entirely by tokens, with a manual toggle that
 overrides the OS preference in either direction.
+
+### The assistant
+
+"Ask WE26" retrieves rather than generates. Every answer is looked up from the site's own
+structured content and cites the page it came from. Conference answers are the category where
+being confidently wrong does real damage — a hallucinated accessibility cutoff makes someone miss
+their accommodation — so retrieval is the right trade here, and it needs no API key, no backend,
+and nothing secret in a public repo. Below a confidence floor it declines instead of answering
+from one incidental keyword match. Rationale in full on the Redesign Notes page.
 
 ### The routing fix
 

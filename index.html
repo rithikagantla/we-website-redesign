@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/home.css">
 <link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/assistant.css">
 </head>
 <body>
 
@@ -1702,6 +1703,7 @@
         <ul>
           <li><a href="#/notes">Findings</a></li>
           <li><a href="#/notes">Long-term payoff</a></li>
+          <li><a href="#/notes">On the assistant</a></li>
           <li><a href="#/notes">Scope &amp; limits</a></li>
         </ul>
       </nav>
@@ -1865,6 +1867,37 @@
         </section>
 
         <section>
+          <h2>On the assistant</h2>
+          <p>
+            The official WE26 site already ships an AI assistant, so this concept needed one too —
+            the question was what kind. <strong>Ask WE26 retrieves; it does not generate.</strong>
+            Every answer is looked up from this site's own structured content and cites the page it
+            came from, so a visitor can verify it in one click.
+          </p>
+          <p>
+            That was a deliberate call rather than a limitation of a static host. Conference answers
+            are exactly the category where being confidently wrong does real damage: a hallucinated
+            Sept. 15 accessibility cutoff makes someone miss their accommodation, and a hallucinated
+            rate makes them budget wrong. A retrieval system cannot invent a price that was never in
+            the data, and when it has no answer it says so instead of producing a plausible one.
+          </p>
+          <ul>
+            <li><strong>Answers stay current on their own.</strong> &ldquo;What does it cost&rdquo; reads the same tier logic the fee tables use, so it follows the pricing rollover without an edit.</li>
+            <li><strong>Every reply is auditable.</strong> A citation links to the page it came from — which also means a wrong answer is traceable to the content that produced it, not to an opaque model.</li>
+            <li><strong>It runs with no key and no backend.</strong> Nothing to provision, no per-query cost, nothing to leak in a public repo, and it keeps working if a vendor contract lapses.</li>
+            <li><strong>It degrades honestly.</strong> Below a confidence floor it declines and offers the FAQ rather than answering from one incidental keyword match.</li>
+          </ul>
+          <div class="notice notice--action">
+            <div>
+              <strong>The trade-off, stated plainly:</strong> it only knows what has been written into
+              its knowledge base, so it can't handle a genuinely novel question the way a language
+              model would. For a conference site where the top questions are known and the cost of a
+              wrong date is a missed deadline, that's the right side of the trade — but it is a trade.
+            </div>
+          </div>
+        </section>
+
+        <section>
           <h2>Scope and limits</h2>
           <p>
             Honest boundaries on what this is, so it can be judged for what it claims to be:
@@ -1941,10 +1974,47 @@
   </div>
 </footer>
 
+
+<button class="ask-launch" id="ask-launch" aria-label="Open the WE26 assistant">
+  <svg width="17" height="17" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15.5 11.2A2.3 2.3 0 0 1 13.2 13.5H5.6L2.5 16V4.3A2.3 2.3 0 0 1 4.8 2h8.4a2.3 2.3 0 0 1 2.3 2.3z"/>
+  </svg>
+  <span>Ask WE26</span>
+</button>
+
+<div class="ask-panel" id="ask-panel" role="dialog" aria-modal="false" aria-labelledby="ask-title" hidden>
+  <div class="ask-head">
+    <div>
+      <h2 id="ask-title">Ask WE26</h2>
+      <p>Answers looked up from this site &mdash; each one cites its source.</p>
+    </div>
+    <button class="ask-close" id="ask-close" aria-label="Close the assistant">
+      <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M1 1l10 10M11 1L1 11"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="ask-log" id="ask-log" role="log" aria-live="polite"></div>
+
+  <form class="ask-form" id="ask-form">
+    <label class="skip" for="ask-input">Ask a question about WE26</label>
+    <input type="text" id="ask-input" placeholder="Ask about rates, deadlines, hours&hellip;" autocomplete="off">
+    <button type="submit" aria-label="Send">
+      <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 8h11M8.5 3.5L13 8l-4.5 4.5"/>
+      </svg>
+    </button>
+  </form>
+
+  <p class="ask-foot">Retrieval over this site&rsquo;s content &mdash; not a generative model. It will say when it doesn&rsquo;t know.</p>
+</div>
+
 <script src="assets/js/router.js"></script>
 <script src="assets/js/site.js"></script>
 <script src="assets/js/schedule.js"></script>
 <script src="assets/js/faq.js"></script>
 <script src="assets/js/involve.js"></script>
+<script src="assets/js/assistant.js"></script>
 </body>
 </html>

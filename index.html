@@ -1512,8 +1512,175 @@
 
 
   <section class="page" data-route="/get-involved" hidden>
-    <div class="wrap page__head"><h1>Get Involved</h1></div>
+    <div class="wrap page__head">
+      <p class="eyebrow">Join the work</p>
+      <h1>Get Involved</h1>
+      <p class="lede">
+        There are several ways into SWE and no single front door. This page names the routes, then
+        drafts the introduction email for you — so the hard part is just deciding to send it.
+      </p>
+    </div>
+
+    <div class="wrap layout">
+      <nav class="rail" aria-label="On this page">
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="#/get-involved">Ways in</a></li>
+          <li><a href="#/get-involved">Draft your email</a></li>
+          <li><a href="#/get-involved">Where to send it</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+
+        <section>
+          <h2>Ways in</h2>
+          <div class="hub">
+            <div class="hub__card">
+              <h3>Volunteer at WE26</h3>
+              <p>The conference runs on volunteers — registration desks, session support, wayfinding. The lowest-commitment way to meet the people who organize everything else.</p>
+              <span>Nov. 5–7, Boston</span>
+            </div>
+            <div class="hub__card">
+              <h3>Directorates &amp; working groups</h3>
+              <p>SWE's ongoing work happens here. Members meet year-round, and gather at WE26 for a meetup and dinner. Joining goes through the group's lead.</p>
+              <span>Year-round</span>
+            </div>
+            <div class="hub__card">
+              <h3>Section leadership</h3>
+              <p>Collegiate and professional sections run locally and are usually the fastest place to take on real responsibility early.</p>
+              <span>Local</span>
+            </div>
+            <div class="hub__card">
+              <h3>SWENext &amp; outreach</h3>
+              <p>Volunteer with K–12 programs, including the SWENext Innovation Expo on the Saturday of the conference.</p>
+              <span>K–12</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Draft your email</h2>
+          <p>
+            Fill this in and a complete introduction is composed on the right. Nothing is sent from
+            this page and nothing is stored — the draft goes to your own mail client, or you copy it.
+          </p>
+
+          <form class="compose" id="involve-form" novalidate>
+            <div class="form-stack">
+              <div class="field">
+                <label for="f-to">Send to</label>
+                <input type="email" id="f-to" placeholder="paste the SWE contact address">
+                <small>Left blank on purpose — see &ldquo;where to send it&rdquo; below for how to find the right address.</small>
+              </div>
+
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input type="text" id="f-name" placeholder="Rithika Gantla">
+              </div>
+
+              <div class="field">
+                <label for="f-affiliation">School or employer</label>
+                <input type="text" id="f-affiliation" placeholder="e.g. Purdue University">
+              </div>
+
+              <div class="field">
+                <label for="f-role">You are a</label>
+                <select id="f-role">
+                  <option>Collegiate student</option>
+                  <option>Graduate student</option>
+                  <option>Early-career engineer</option>
+                  <option>Professional engineer</option>
+                  <option>Prospective SWE member</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="f-attending">WE26 in November</label>
+                <select id="f-attending">
+                  <option value="yes">I'm planning to attend</option>
+                  <option value="hoping">I'm hoping to attend</option>
+                  <option value="no">I can't make it this year</option>
+                  <option value="skip">Don't mention it</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>What you're interested in</label>
+                <div class="checks">
+                  <label class="check"><input type="checkbox" data-interest="volunteer" checked><span><b>Volunteering at WE26</b>Help run the conference itself</span></label>
+                  <label class="check"><input type="checkbox" data-interest="directorate" checked><span><b>A directorate or working group</b>SWE's ongoing year-round work</span></label>
+                  <label class="check"><input type="checkbox" data-interest="section"><span><b>Section leadership</b>Collegiate or professional section roles</span></label>
+                  <label class="check"><input type="checkbox" data-interest="outreach"><span><b>SWENext &amp; K-12 outreach</b>Including the Innovation Expo</span></label>
+                  <label class="check"><input type="checkbox" data-interest="speaking"><span><b>Speaking at a future conference</b>Sessions, panels, posters</span></label>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="f-why">Anything you'd add <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+                <textarea id="f-why" placeholder="One or two sentences on what draws you to SWE, or what you'd bring."></textarea>
+              </div>
+            </div>
+
+            <div class="preview">
+              <div class="preview__head">
+                <span>Draft</span>
+                <span>not sent from this page</span>
+              </div>
+              <pre class="preview__body" id="email-preview"></pre>
+              <div class="preview__foot">
+                <a class="btn btn--primary btn--sm" id="open-mail" href="#">Open in mail app</a>
+                <button class="btn btn--ghost btn--sm" type="button" id="copy-email">Copy draft</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section>
+          <h2>Where to send it</h2>
+          <p>
+            This is a concept site, so it doesn't publish SWE staff addresses — inventing a
+            plausible-looking one would be worse than pointing you at the real thing. Each route
+            below is where the official site actually directs these requests.
+          </p>
+
+          <div class="routes">
+            <dl class="route">
+              <dt>Volunteering at WE26</dt>
+              <dd>The official WE26 site has a <a href="https://we26.swe.org/resources/volunteer-at-we26/" rel="noopener">Volunteer at WE26</a> page under Resources, with the current signup and contact for conference volunteers.</dd>
+            </dl>
+            <dl class="route">
+              <dt>Directorates &amp; working groups</dt>
+              <dd>Membership goes through each group's lead rather than a central inbox. Ask your section officers who leads the group you're interested in, or use the general contact on <a href="https://swe.org/" rel="noopener">swe.org</a>. Directorate members are invited to a meetup and dinner at WE26 — invitations go to leads in early September.</dd>
+            </dl>
+            <dl class="route">
+              <dt>Section leadership</dt>
+              <dd>Start with your own collegiate or professional section's officers and faculty advisor. This is usually the fastest route to real responsibility.</dd>
+            </dl>
+            <dl class="route">
+              <dt>Speaking at a future conference</dt>
+              <dd>The call for participation and speaker materials live on the conference site's <a href="https://we26.swe.org/resources/speaker-resources/" rel="noopener">Speaker Resources</a> page.</dd>
+            </dl>
+            <dl class="route">
+              <dt>Housing questions</dt>
+              <dd><strong>housing@swe.org</strong> — the one address the official WE26 site publishes directly, handled by Cvent/Passkey.</dd>
+            </dl>
+          </div>
+
+          <div class="notice notice--action">
+            <div>
+              <strong>If you're going to WE26 anyway, ask before you go.</strong> Sending this in
+              September means you can meet people in person in November rather than starting the
+              conversation cold afterwards. The affinity group lounges and the directorate meetup
+              are where most of these introductions actually happen.
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
   </section>
+
   <section class="page" data-route="/notes" hidden>
     <div class="wrap page__head"><h1>Redesign Notes</h1></div>
   </section>
@@ -1575,5 +1742,6 @@
 <script src="assets/js/site.js"></script>
 <script src="assets/js/schedule.js"></script>
 <script src="assets/js/faq.js"></script>
+<script src="assets/js/involve.js"></script>
 </body>
 </html>

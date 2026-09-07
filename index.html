@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WE26 — Radiate Change</title>
+<meta name="description" content="Concept redesign of the WE26 conference site — the Society of Women Engineers annual conference, Boston, Nov. 5–7, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Source+Sans+3:ital,wght@0,300..800;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="ribbon">
+  <strong>Unofficial concept redesign.</strong> Not affiliated with or endorsed by the Society of Women Engineers.
+  Content sourced from <a href="https://we26.swe.org/" rel="noopener">we26.swe.org</a> for demonstration purposes.
+</div>
+
+<header class="masthead">
+  <div class="wrap masthead__bar">
+    <a class="wordmark" href="#/">
+      <span><span class="wordmark__we">WE</span>26</span>
+      <span class="wordmark__sub">Boston · Nov 5–7</span>
+    </a>
+
+    <button class="nav__burger" aria-expanded="false" aria-label="Open menu">
+      <svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M1 1h16M1 7h16M1 13h16"/>
+      </svg>
+    </button>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li class="nav__item" data-section="/registration">
+          <button class="nav__top" aria-expanded="false">
+            Registration
+            <svg class="nav__caret" viewBox="0 0 10 6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav__panel" hidden>
+            <a href="#/registration"><strong>Registration home</strong><small>Status, deadlines, and what to do next</small></a>
+            <a href="#/registration/fees">Fees<small>All rates for professionals and collegiates</small></a>
+            <a href="#/registration/how">How to Register<small>Attendee types and eligibility</small></a>
+            <a href="#/registration/discounts">Discounts &amp; Grants<small>Codes, bulk rates, and grants</small></a>
+          </div>
+        </li>
+
+        <li class="nav__item" data-section="/program">
+          <button class="nav__top" aria-expanded="false">
+            Program
+            <svg class="nav__caret" viewBox="0 0 10 6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav__panel" hidden>
+            <a href="#/program"><strong>Program home</strong><small>Everything happening across three days</small></a>
+            <a href="#/program/schedule">Schedule at a Glance</a>
+            <a href="#/program/keynotes">Keynote Speakers</a>
+            <a href="#/program/career-fair">Career Fair</a>
+            <a href="#/program/networking">Networking &amp; Special Events</a>
+            <a href="#/program/awards">Awards</a>
+            <a href="#/program/swenext">SWENext Innovation Expo</a>
+          </div>
+        </li>
+
+        <li class="nav__item"><a class="nav__top" href="#/travel">Travel &amp; Housing</a></li>
+        <li class="nav__item"><a class="nav__top" href="#/exhibitors">Exhibitors</a></li>
+        <li class="nav__item"><a class="nav__top" href="#/faqs">FAQs</a></li>
+        <li class="nav__item"><a class="nav__top" href="#/get-involved">Get Involved</a></li>
+        <li><a class="btn btn--primary btn--sm" href="#/registration">Register</a></li>
+        <li>
+          <button class="theme-toggle" aria-label="Switch colour theme" title="Switch colour theme">
+            <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="8" cy="8" r="3.2"/>
+              <path d="M8 .8v1.6M8 13.6v1.6M15.2 8h-1.6M2.4 8H.8M13.1 2.9l-1.1 1.1M4 12l-1.1 1.1M13.1 13.1L12 12M4 4L2.9 2.9" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="crumbs" id="crumbbar" hidden>
+  <div class="wrap">
+    <ol class="crumbs__list" id="crumbs"></ol>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ==================== HOME ==================== -->
+  <section class="page" data-route="/" hidden>
+    <div class="wrap page__head">
+      <p class="eyebrow">Nov. 5–7, 2026 · Boston, MA</p>
+      <h1>Radiate Change</h1>
+      <p class="lede">
+        The Society of Women Engineers annual conference returns to the Thomas M. Menino
+        Convention &amp; Exhibition Center — 14,000+ attendees, 300+ exhibiting organizations,
+        and more than 200 sessions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== REGISTRATION ==================== -->
+  <section class="page" data-route="/registration" hidden>
+    <div class="wrap page__head"><h1>Registration</h1></div>
+  </section>
+  <section class="page" data-route="/registration/fees" hidden>
+    <div class="wrap page__head"><h1>Registration Fees</h1></div>
+  </section>
+  <section class="page" data-route="/registration/how" hidden>
+    <div class="wrap page__head"><h1>How to Register</h1></div>
+  </section>
+  <section class="page" data-route="/registration/discounts" hidden>
+    <div class="wrap page__head"><h1>Discounts &amp; Grants</h1></div>
+  </section>
+
+  <!-- ==================== PROGRAM ==================== -->
+  <section class="page" data-route="/program" hidden>
+    <div class="wrap page__head"><h1>Program</h1></div>
+  </section>
+  <section class="page" data-route="/program/schedule" hidden>
+    <div class="wrap page__head"><h1>Schedule at a Glance</h1></div>
+  </section>
+  <section class="page" data-route="/program/keynotes" hidden>
+    <div class="wrap page__head"><h1>Keynote Speakers</h1></div>
+  </section>
+  <section class="page" data-route="/program/career-fair" hidden>
+    <div class="wrap page__head"><h1>Career Fair</h1></div>
+  </section>
+  <section class="page" data-route="/program/networking" hidden>
+    <div class="wrap page__head"><h1>Networking &amp; Special Events</h1></div>
+  </section>
+  <section class="page" data-route="/program/awards" hidden>
+    <div class="wrap page__head"><h1>Awards</h1></div>
+  </section>
+  <section class="page" data-route="/program/swenext" hidden>
+    <div class="wrap page__head"><h1>SWENext Innovation Expo</h1></div>
+  </section>
+
+  <!-- ==================== STANDALONE ==================== -->
+  <section class="page" data-route="/travel" hidden>
+    <div class="wrap page__head"><h1>Travel &amp; Housing</h1></div>
+  </section>
+  <section class="page" data-route="/faqs" hidden>
+    <div class="wrap page__head"><h1>FAQs</h1></div>
+  </section>
+  <section class="page" data-route="/exhibitors" hidden>
+    <div class="wrap page__head"><h1>Exhibitors &amp; Partners</h1></div>
+  </section>
+  <section class="page" data-route="/get-involved" hidden>
+    <div class="wrap page__head"><h1>Get Involved</h1></div>
+  </section>
+  <section class="page" data-route="/notes" hidden>
+    <div class="wrap page__head"><h1>Redesign Notes</h1></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="wordmark" href="#/">
+          <span><span class="wordmark__we">WE</span>26</span>
+        </a>
+        <p style="color: var(--text-dim); font-size: 0.92rem; margin-top: var(--sp-3); max-width: 34ch;">
+          Thomas M. Menino Convention &amp; Exhibition Center<br>
+          415 Summer St, Boston, MA 02210
+        </p>
+      </div>
+      <div>
+        <h4>Attend</h4>
+        <ul>
+          <li><a href="#/registration">Registration</a></li>
+          <li><a href="#/registration/fees">Fees</a></li>
+          <li><a href="#/registration/discounts">Discounts &amp; Grants</a></li>
+          <li><a href="#/travel">Travel &amp; Housing</a></li>
+          <li><a href="#/faqs">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Program</h4>
+        <ul>
+          <li><a href="#/program/schedule">Schedule at a Glance</a></li>
+          <li><a href="#/program/keynotes">Keynote Speakers</a></li>
+          <li><a href="#/program/career-fair">Career Fair</a></li>
+          <li><a href="#/program/awards">Awards</a></li>
+          <li><a href="#/program/swenext">SWENext Expo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>This project</h4>
+        <ul>
+          <li><a href="#/get-involved">Get Involved</a></li>
+          <li><a href="#/exhibitors">Exhibitors &amp; Partners</a></li>
+          <li><a href="#/notes">Redesign Notes</a></li>
+          <li><a href="https://we26.swe.org/" rel="noopener">Official WE26 site ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__note">
+      This is a student-built concept redesign created to explore information architecture and
+      accessibility improvements. It is not an official Society of Women Engineers property, it
+      takes no registrations, and it processes no payments. For anything real — registration,
+      housing, or accessibility requests — use the official site.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/router.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* ==========================================================================
+   WE26 concept redesign — design tokens
+   Palette derived from the real WE26 custom properties (oklch), read from
+   we26.swe.org: primary hue 280 (indigo/violet), accent hue 224 (cyan),
+   tertiary hue 354 (magenta), secondary hue 120 (lime).
+   Dark-first: :root is the dark palette, light is redefined in the two
+   guards below so an explicit theme choice wins in both directions.
+   ========================================================================== */
+
+:root {
+  /* -- surfaces + ink ---------------------------------------------------- */
+  --ground:      #0B0725;
+  --surface:     #150E3D;
+  --surface-2:   #1E1554;
+  --surface-3:   #2A1E6B;
+  --line:        rgba(255, 255, 255, 0.13);
+  --line-strong: rgba(255, 255, 255, 0.26);
+  --text:        #EFEAFF;
+  --text-dim:    #B4A9DC;
+  --text-faint:  #8478B4;
+
+  /* -- brand ------------------------------------------------------------- */
+  --violet:      #6D3BF5;
+  --violet-deep: #2B1668;
+  --magenta:     #FF2E88;
+  --cyan:        #45D2EC;
+  --lime:        #B6F04A;
+
+  /* -- roles ------------------------------------------------------------- */
+  --accent:      var(--magenta);
+  --link:        var(--cyan);
+  --focus:       var(--cyan);
+  --status-ok:   var(--lime);
+  --status-warn: #FFB020;
+
+  /* the hero band is deliberately dark in both themes */
+  --hero-ground: #0B0725;
+  --hero-text:   #FFFFFF;
+  --hero-dim:    #C3B8EC;
+
+  /* -- type -------------------------------------------------------------- */
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --step--1: clamp(0.80rem, 0.77rem + 0.14vw, 0.88rem);
+  --step-0:  clamp(1.00rem, 0.96rem + 0.20vw, 1.12rem);
+  --step-1:  clamp(1.25rem, 1.17rem + 0.38vw, 1.50rem);
+  --step-2:  clamp(1.56rem, 1.42rem + 0.71vw, 2.03rem);
+  --step-3:  clamp(1.95rem, 1.70rem + 1.24vw, 2.75rem);
+  --step-4:  clamp(2.44rem, 2.02rem + 2.08vw, 3.71rem);
+  --step-5:  clamp(3.05rem, 2.36rem + 3.44vw, 5.01rem);
+
+  /* -- space + shape ----------------------------------------------------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+  --sp-9: 7rem;
+
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-lg: 12px;
+
+  --wrap: 1180px;
+  --measure: 66ch;
+}
+
+/* Light palette — applies when the OS says light and the viewer has not
+   explicitly stamped dark. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --ground:      #FBF9FF;
+    --surface:     #FFFFFF;
+    --surface-2:   #F3EEFF;
+    --surface-3:   #E7DEFF;
+    --line:        rgba(43, 22, 104, 0.14);
+    --line-strong: rgba(43, 22, 104, 0.30);
+    --text:        #1A1040;
+    --text-dim:    #574B7D;
+    --text-faint:  #7A6EA3;
+
+    --violet:      #4B1FBF;
+    --violet-deep: #2B1668;
+    --magenta:     #D1005F;
+    --cyan:        #0E7E97;
+    --lime:        #4F7A08;
+
+    --status-warn: #A85E00;
+  }
+}
+
+/* Explicit dark choice wins over a light OS. */
+:root[data-theme="dark"] {
+  --ground:      #0B0725;
+  --surface:     #150E3D;
+  --surface-2:   #1E1554;
+  --surface-3:   #2A1E6B;
+  --line:        rgba(255, 255, 255, 0.13);
+  --line-strong: rgba(255, 255, 255, 0.26);
+  --text:        #EFEAFF;
+  --text-dim:    #B4A9DC;
+  --text-faint:  #8478B4;
+
+  --violet:      #6D3BF5;
+  --magenta:     #FF2E88;
+  --cyan:        #45D2EC;
+  --lime:        #B6F04A;
+
+  --status-warn: #FFB020;
+}
+
+/* Explicit light choice wins over a dark OS. */
+:root[data-theme="light"] {
+  --ground:      #FBF9FF;
+  --surface:     #FFFFFF;
+  --surface-2:   #F3EEFF;
+  --surface-3:   #E7DEFF;
+  --line:        rgba(43, 22, 104, 0.14);
+  --line-strong: rgba(43, 22, 104, 0.30);
+  --text:        #1A1040;
+  --text-dim:    #574B7D;
+  --text-faint:  #7A6EA3;
+
+  --violet:      #4B1FBF;
+  --violet-deep: #2B1668;
+  --magenta:     #D1005F;
+  --cyan:        #0E7E97;
+  --lime:        #4F7A08;
+
+  --status-warn: #A85E00;
+}

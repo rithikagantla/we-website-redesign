@@ -52,6 +52,11 @@ a:hover { color: var(--magenta); }
   border-radius: 2px;
 }
 
+/* The router moves focus to the page heading so screen readers announce the
+   new page. That target is not interactive, so it should not paint a ring. */
+[tabindex="-1"]:focus,
+[tabindex="-1"]:focus-visible { outline: none; }
+
 /* -- shared atoms --------------------------------------------------------- */
 
 .wrap {

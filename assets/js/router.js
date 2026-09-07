@@ -140,7 +140,7 @@ function route() {
     heading.setAttribute("tabindex", "-1");
     heading.focus({ preventScroll: true });
   }
-  window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+  window.scrollTo({ top: 0, behavior: "instant" });
 
   document.dispatchEvent(new CustomEvent("we26:route", { detail: { path } }));
 }

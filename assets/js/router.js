@@ -92,7 +92,7 @@ function markActiveNav(path) {
     const owns = item.dataset.section;
     item.classList.toggle("is-active", Boolean(owns) && trail.includes(owns));
   });
-  document.querySelectorAll(".nav a[href^='#/']").forEach((a) => {
+  document.querySelectorAll(".nav a[href^='#/'], .rail a[href^='#/']").forEach((a) => {
     const href = a.getAttribute("href").slice(1);
     if (href === path) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");

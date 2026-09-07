@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/pages.css">
 </head>
 <body>
 
@@ -219,17 +220,381 @@
 
   <!-- ==================== REGISTRATION ==================== -->
   <section class="page" data-route="/registration" hidden>
-    <div class="wrap page__head"><h1>Registration</h1></div>
+    <div class="wrap page__head">
+      <p class="eyebrow">Attend WE26</p>
+      <h1>Registration</h1>
+      <p class="lede">
+        Everything you need to register, in the order you need it. Registration for WE26 is open
+        and handled by Cvent, SWE's authorized registration provider.
+      </p>
+    </div>
+
+    <div class="wrap layout">
+      <nav class="rail" aria-label="Registration section">
+        <h4>Registration</h4>
+        <ul>
+          <li><a href="#/registration">Overview</a></li>
+          <li><a href="#/registration/fees">Fees</a></li>
+          <li><a href="#/registration/how">How to Register</a></li>
+          <li><a href="#/registration/discounts">Discounts &amp; Grants</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <div class="status-band">
+          <div class="status-band__main">
+            <p class="eyebrow">Pricing tier in effect today</p>
+            <div class="status-band__tier" data-tier-label>Standard</div>
+            <p>Rates shown across this section are <span data-tier-note>on or after Sept. 1</span>. Late and on-site pricing begins Oct. 19.</p>
+          </div>
+          <a class="btn btn--primary" href="https://web.cvent.com/event/452c80f7-ee05-4fac-be68-20ccd9eba812/summary" rel="noopener">Register on Cvent ↗</a>
+        </div>
+
+        <section>
+          <div class="hub">
+            <a class="hub__card" href="#/registration/fees">
+              <h3>Fees</h3>
+              <p>Full-conference and daily rates for professionals and collegiates, with the tier you're in today marked.</p>
+              <span>See all rates →</span>
+            </a>
+            <a class="hub__card" href="#/registration/how">
+              <h3>How to Register</h3>
+              <p>Which attendee type you are, what member pricing requires, and what each type includes.</p>
+              <span>Check eligibility →</span>
+            </a>
+            <a class="hub__card" href="#/registration/discounts">
+              <h3>Discounts &amp; Grants</h3>
+              <p>Promo codes, bulk group rates, faculty discounts, and member-sponsored grants.</p>
+              <span>Find savings →</span>
+            </a>
+          </div>
+        </section>
+
+        <section>
+          <h2>Before you register</h2>
+          <ul>
+            <li><strong>Member pricing requires a current FY27 membership</strong> with a paid date on or before June 30, 2027 — and you must register with the email tied to your SWE member account. A different email means nonmember pricing.</li>
+            <li><strong>Membership is not included</strong> with your registration.</li>
+            <li><strong>Only one promo code per attendee</strong>, for both professional and collegiate registration.</li>
+            <li><strong>Need a visa invitation letter?</strong> Say so during registration and it is generated automatically, then emailed to you once your registration is confirmed.</li>
+          </ul>
+          <div class="notice notice--warn">
+            <div>
+              <strong>Beware of scams.</strong> Cvent is the only authorized registration site for WE26,
+              and Cvent/Passkey is the only official housing partner. SWE does not sell or share
+              attendee or exhibitor contact information, and will never call to book your hotel.
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>On-site registration</h2>
+          <p><strong>Primary registration</strong> — Thomas M. Menino Convention and Exhibition Center, North Lobby, 415 Summer St, Boston, MA 02210.</p>
+          <dl class="hours">
+            <div class="hours__row"><dt>Wednesday, Nov. 4</dt><dd>12:00 p.m. – 7:00 p.m.</dd></div>
+            <div class="hours__row"><dt>Thursday, Nov. 5</dt><dd>6:30 a.m. – 7:00 p.m.</dd></div>
+            <div class="hours__row"><dt>Friday, Nov. 6</dt><dd>7:00 a.m. – 4:00 p.m.</dd></div>
+            <div class="hours__row"><dt>Saturday, Nov. 7</dt><dd>7:30 a.m. – 12:00 p.m.</dd></div>
+          </dl>
+
+          <h3>Off-site registration</h3>
+          <p>Westin Boston Seaport (425 Summer St) and Omni Boston Hotel at the Seaport (450 Summer St).</p>
+          <dl class="hours">
+            <div class="hours__row"><dt>Wednesday, Nov. 4</dt><dd>7:00 a.m. – 3:00 p.m.</dd></div>
+            <div class="hours__row"><dt>Thursday, Nov. 5</dt><dd>6:30 a.m. – 5:00 p.m.</dd></div>
+          </dl>
+
+          <h3>SWENext Innovation Expo registration</h3>
+          <p>The Westin Boston Seaport District, 425 Summer St.</p>
+          <dl class="hours">
+            <div class="hours__row"><dt>Saturday, Nov. 7</dt><dd>8:30 a.m. – 11:30 a.m.</dd></div>
+          </dl>
+        </section>
+      </div>
+    </div>
   </section>
+
   <section class="page" data-route="/registration/fees" hidden>
-    <div class="wrap page__head"><h1>Registration Fees</h1></div>
+    <div class="wrap page__head">
+      <p class="eyebrow">Registration</p>
+      <h1>Registration Fees</h1>
+      <p class="lede">
+        Rates in the <span data-tier-label>Standard</span> column apply today. Expired tiers are
+        struck through so you aren't reading a price you can no longer get.
+      </p>
+    </div>
+
+    <div class="wrap layout">
+      <nav class="rail" aria-label="Registration section">
+        <h4>Registration</h4>
+        <ul>
+          <li><a href="#/registration">Overview</a></li>
+          <li><a href="#/registration/fees">Fees</a></li>
+          <li><a href="#/registration/how">How to Register</a></li>
+          <li><a href="#/registration/discounts">Discounts &amp; Grants</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <section>
+          <div class="table-scroll">
+            <table data-fees>
+              <caption>Professional — full conference</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Registration type</th>
+                  <th scope="col">Early Bird<br>on or before Aug. 31</th>
+                  <th scope="col">Standard<br>on or after Sept. 1</th>
+                  <th scope="col">Late / On-Site<br>on or after Oct. 19</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Professional SWE member</th><td>$625</td><td>$700</td><td>$800</td></tr>
+                <tr><th scope="row">Professional nonmember</th><td>$875</td><td>$950</td><td>$1,050</td></tr>
+                <tr><th scope="row">STEM reentry, unemployed, or retired — member</th><td>$275</td><td>$400</td><td>$500</td></tr>
+                <tr><th scope="row">STEM reentry, unemployed, or retired — nonmember</th><td>$400</td><td>$500</td><td>$550</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <div class="table-scroll">
+            <table data-fees>
+              <caption>Professional — daily rate</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Registration type</th>
+                  <th scope="col">Early Bird<br>on or before Aug. 31</th>
+                  <th scope="col">Standard<br>on or after Sept. 1</th>
+                  <th scope="col">Late / On-Site<br>on or after Oct. 19</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Professional SWE member</th><td>$350</td><td>$450</td><td>$550</td></tr>
+                <tr><th scope="row">Professional nonmember</th><td>$525</td><td>$625</td><td>$725</td></tr>
+                <tr><th scope="row">STEM reentry, unemployed, or retired — member</th><td>$175</td><td>$275</td><td>$275</td></tr>
+                <tr><th scope="row">STEM reentry, unemployed, or retired — nonmember</th><td>$275</td><td>$375</td><td>$375</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <div class="table-scroll">
+            <table data-fees>
+              <caption>Collegiate — full conference</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Registration type</th>
+                  <th scope="col">Early Bird<br>on or before Aug. 31</th>
+                  <th scope="col">Standard<br>on or after Sept. 1</th>
+                  <th scope="col">Late / On-Site<br>on or after Oct. 19</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Collegiate SWE member</th><td>$275</td><td>$350</td><td>$450</td></tr>
+                <tr><th scope="row">Collegiate nonmember</th><td>$400</td><td>$475</td><td>$475</td></tr>
+              </tbody>
+            </table>
+            <p class="table-note">
+              Graduate students registering full-time register as collegiates. Exhibitor booth
+              personnel register separately; floor-only exhibitor access is $150 per exhibitor.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <div class="notice notice--action">
+            <div>
+              <strong>Collegiate members save the most.</strong> A collegiate SWE member pays $350 at
+              standard pricing against $475 for a nonmember — more than the cost of membership itself.
+              Check <a href="#/registration/discounts">discounts and grants</a> before you pay.
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   </section>
+
   <section class="page" data-route="/registration/how" hidden>
-    <div class="wrap page__head"><h1>How to Register</h1></div>
+    <div class="wrap page__head">
+      <p class="eyebrow">Registration</p>
+      <h1>How to Register</h1>
+      <p class="lede">
+        The registration portal is split into three categories — professional, collegiate, and
+        exhibitor — plus free precollege access to the SWENext Innovation Expo.
+      </p>
+    </div>
+
+    <div class="wrap layout">
+      <nav class="rail" aria-label="Registration section">
+        <h4>Registration</h4>
+        <ul>
+          <li><a href="#/registration">Overview</a></li>
+          <li><a href="#/registration/fees">Fees</a></li>
+          <li><a href="#/registration/how">How to Register</a></li>
+          <li><a href="#/registration/discounts">Discounts &amp; Grants</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <section>
+          <h2>Member pricing eligibility</h2>
+          <p>
+            To qualify for member rates you need a current individual FY27 membership with a paid
+            date on or before June 30, 2027, and you must register using your SWE member
+            credentials. <strong>Registering with an email that isn't attached to your SWE member
+            account will charge you nonmember pricing.</strong>
+          </p>
+          <p>
+            Attendees without a current membership pay nonmember rates. Nonmembers who use a bulk
+            corporate discount code do not receive FY27 SWE membership with their registration.
+          </p>
+        </section>
+
+        <section>
+          <h2>Professional</h2>
+          <p>
+            All postgraduate attendees, speakers, press, and anyone who is not a collegian or
+            exhibitor — including active-career, retired, unemployed, and STEM reentry attendees.
+          </p>
+          <ul>
+            <li><strong>Career fair access:</strong> priority access on Friday, Nov. 6, from 10:30–11:30 a.m., then general access.</li>
+            <li><strong>Promo codes:</strong> one per attendee.</li>
+            <li>There is no career-fair-only registration for professionals.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Collegiate</h2>
+          <p>Undergraduate members and nonmembers, plus full-time graduate students.</p>
+          <ul>
+            <li><strong>Career fair access:</strong> designated times on Thursday, Nov. 5 and Friday, Nov. 6.</li>
+            <li><strong>Promo codes:</strong> one per attendee.</li>
+            <li>There is no career-fair-only registration for collegians.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Exhibitor</h2>
+          <p>Booth personnel only, capped at the allotment set by SWE for each booth size.</p>
+          <ul>
+            <li><strong>Exhibitor full registration:</strong> exhibit hall access at all times plus full WE26 access.</li>
+            <li><strong>Exhibitor floor-only ($150):</strong> career fair floor only, no access to the rest of WE26.</li>
+            <li>FY27 membership is not included with either exhibitor registration type.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Precollege</h2>
+          <p>
+            Precollege students aged 5–18, parents, and STEM advocates are welcome at the
+            <a href="#/program/swenext">SWENext Innovation Expo</a>. Public registration is free and
+            grants access to the expo only.
+          </p>
+          <div class="notice">
+            <div>
+              Attendees under 18 are not permitted on the career fair floor unless explicitly
+              permitted by SWE HQ staff and arranged in advance.
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   </section>
+
   <section class="page" data-route="/registration/discounts" hidden>
-    <div class="wrap page__head"><h1>Discounts &amp; Grants</h1></div>
+    <div class="wrap page__head">
+      <p class="eyebrow">Registration</p>
+      <h1>Discounts &amp; Grants</h1>
+      <p class="lede">
+        Six separate ways to pay less for WE26. On the live site these are spread across three
+        pages and a FAQ; here they are one list with their deadlines attached.
+      </p>
+    </div>
+
+    <div class="wrap layout">
+      <nav class="rail" aria-label="Registration section">
+        <h4>Registration</h4>
+        <ul>
+          <li><a href="#/registration">Overview</a></li>
+          <li><a href="#/registration/fees">Fees</a></li>
+          <li><a href="#/registration/how">How to Register</a></li>
+          <li><a href="#/registration/discounts">Discounts &amp; Grants</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <section>
+          <h2>Individual promo code</h2>
+          <p>
+            Code <strong>READYSETGO</strong> took 10% off individual registration through Aug. 31.
+            Only one promo code applies per attendee.
+          </p>
+        </section>
+
+        <section>
+          <h2>University or college groups</h2>
+          <p>
+            Groups of 10 or more students prepay for <strong>30% off member and nonmember
+            registration</strong>. Orders submitted by Aug. 31 get 30% off early-bird pricing;
+            orders from Sept. 1 – Oct. 1 get 30% off standard pricing. No bulk orders are accepted
+            after Oct. 1.
+          </p>
+          <p>
+            SWE emails an invoice within 7–10 business days of your order. Codes are not distributed
+            until payment fully processes, which takes another 5–7 business days. Coordinate your
+            headcount before ordering — changes aren't accommodated and registrations are
+            non-refundable.
+          </p>
+        </section>
+
+        <section>
+          <h2>Employers and organizations</h2>
+          <p>
+            Bringing 25 or more professionals? Prepay for <strong>30% off the nonmember
+            registration rate</strong>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Faculty and staff</h2>
+          <p>
+            For every 4 students who register from a university or college, SWE provides
+            <strong>1 free registration</strong> for a faculty or staff member. If a faculty member
+            registers before the required student count is confirmed, SWE refunds the fee.
+          </p>
+        </section>
+
+        <section>
+          <h2>Middle- and low-income countries</h2>
+          <p>
+            A limited number of registrations are offered at a flat <strong>$100 USD for
+            professionals</strong> and <strong>$25 USD for collegians</strong> who are SWE members
+            living in select countries. The discount applies automatically at checkout. Students
+            from these countries currently studying in the United States are not eligible.
+          </p>
+        </section>
+
+        <section>
+          <h2>Member-sponsored registration grants</h2>
+          <p>
+            SWE members fund a pool of registration grants for other members. Availability and
+            application windows are announced on the official WE26 resources page.
+          </p>
+          <div class="notice notice--action">
+            <div>
+              <strong>Stacking rule.</strong> Only one promo code applies per attendee, so a bulk
+              group rate and an individual code cannot be combined. The country-based flat rate is
+              applied automatically and is the exception.
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   </section>
+
 
   <!-- ==================== PROGRAM ==================== -->
   <section class="page" data-route="/program" hidden>
